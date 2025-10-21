@@ -1,0 +1,19 @@
+{
+  "name": "app-grok-dev",
+  "version": "1.0.0",
+  "description": "Integração Grok (xAI) para Docflow",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "bash build.sh"
+  },
+  "author": "doc9-oficial",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "docgo-sdk": "github:doc9-oficial/docgo-sdk-js"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "name": "app-grok",
+  "version": "1.0.0",
+  "description": "App Grok (xAI) - Resumo, análise e prompt de texto via API Grok",
+  "auth": {
+    "description": {
+      "title": "Token de acesso à API Grok (xAI)",
+      "body": "Para utilizar esta aplicação, é necessário obter um token de acesso à API Grok (xAI).",
+      "footer": "Token necessário para autenticação",
+      "link": "https://docs.x.ai/docs/api-reference#authentication"
+    },
+    "params": [
+      {
+        "name": "grokToken",
+        "type": "string",
+        "inputType": "password",
+        "required": true,
+        "label": "Token Grok (xAI)"
+      }
+    ]
+  },
+  "functions": {
+    "resumoIA": {
+      "name": "Resumo da IA",
+      "icon": "Bot",
+      "script": "dist/resumoIA.js",
+      "description": "Gera um resumo do texto informado usando Grok (xAI).",
+      "category": "ia",
+      "params": [
+        {
+          "name": "texto",
+          "type": "string",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Texto para resumir"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função Resumo da IA",
+        "body": "Informe o texto que deseja resumir. O resultado será um resumo gerado pela IA Grok.",
+        "footer": "Consulte a documentação oficial em https://docs.x.ai/docs/api-reference#chat-completions"
+      }
+    },
+    "analiseTexto": {
+      "name": "Análise de Texto",
+      "icon": "Bot",
+      "script": "dist/analiseTexto.js",
+      "description": "Gera uma análise do texto informado usando Grok (xAI).",
+      "category": "ia",
+      "params": [
+        {
+          "name": "texto",
+          "type": "string",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Texto para analisar"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função Análise de Texto",
+        "body": "Informe o texto que deseja analisar. O resultado será uma análise gerada pela IA Grok.",
+        "footer": "Consulte a documentação oficial em https://docs.x.ai/docs/api-reference#chat-completions"
+      }
+    },
+    "analiseComPrompt": {
+      "name": "Análise com Prompt",
+      "icon": "Bot",
+      "script": "dist/analiseComPrompt.js",
+      "description": "Gera uma resposta personalizada para o texto informado usando um prompt customizado na IA Grok.",
+      "category": "ia",
+      "params": [
+        {
+          "name": "texto",
+          "type": "string",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Texto para analisar"
+        },
+        {
+          "name": "prompt",
+          "type": "string",
+          "inputType": "textarea",
+          "required": true,
+          "label": "Prompt customizado para IA"
+        }
+      ],
+      "help": {
+        "title": "Como usar a função Análise com Prompt",
+        "body": "Informe o texto e o prompt customizado. O resultado será uma resposta gerada pela IA Grok conforme o prompt informado.",
+        "footer": "Consulte a documentação oficial em https://docs.x.ai/docs/api-reference#chat-completions"
+      }
+    }
+  }
+}
